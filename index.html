@@ -11,6 +11,8 @@
 	<meta name="description" content="Free exterior map tool for Lethal Companys">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<link rel="icon" href="favicon.webp">
+	<link rel="apple-touch-icon" href="favicon.webp">
 </head>
 <body>
 	<div style="height:100vh; background-color: #000;">
@@ -32,7 +34,7 @@
 						<li><button type="button" class="dropdown-item" onclick="changeMap('Dine')">Dine</button></li>
 						<li><button type="button" class="dropdown-item" onclick="changeMap('Titan')">Titan</button></li>
 						<li><div class="dropdown-divider"></div></li>
-						<li><button type="button" class="dropdown-item" onclick="changeMap('CompanyBuilding', 'The Company Building')">The Company Building</button></li>
+						<li><button type="button" class="dropdown-item" onclick="changeMap('Gordion', 'The Company Building')">The Company Building</button></li>
 					</ul>
 				</li>
 				<li class="nav-item">
@@ -41,14 +43,13 @@
 			</ul>
 		</nav>
 		<div style="height: calc(100% - 54px);">
-			<img id="mapImage" src="maps/Experimentation.jpg" alt="Map" class="img-fluid center mx-auto" style="display: block; max-height: 100%;">
+			<img id="mapImage" src="maps/Experimentation.webp" alt="Map" class="img-fluid center mx-auto" style="display: block; max-height: 100%;">
 		</div>
 	</div>
-	<!-- Thanks to https://steamcommunity.com/sharedfiles/filedetails/?id=3075328887 -->
 </body>
 <script>
 function changeMap(mapImageName, mapName=null) {
-	document.getElementById("mapImage").src = "maps/" + mapImageName + ".jpg";
+	document.getElementById("mapImage").src = "maps/" + mapImageName + ".webp";
 	if (mapName == null) mapName = mapImageName;
 	document.getElementById("mapName").innerText = mapName;
 }
