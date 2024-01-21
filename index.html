@@ -65,7 +65,7 @@ let map =
 function changeMoon(mapImageName, hasFlooded, mapName=null)
 {
 	map = {
-		"name": (mapName) ? mapImageName : mapName,
+		"name": (mapName) ? mapName : mapImageName,
 		"src": "maps/" + mapImageName + ".webp",
 		"flooded_src": hasFlooded ? ("maps/flooded/" + mapImageName + "_Flooded_Timelapse.webp") : null
 	}
@@ -78,5 +78,6 @@ function changeMoon(mapImageName, hasFlooded, mapName=null)
 function changeFlooded()
 {
 	document.getElementById("mapImage").src = (map.flooded_src && document.getElementById("floodedCheck").checked) ? map.flooded_src : map.src
+	document.getElementById("mapName").innerText = map.name + ((map.flooded_src && document.getElementById("floodedCheck").checked) ? " (flooded)" : "");
 }
 </script>
